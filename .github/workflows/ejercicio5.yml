@@ -17,7 +17,6 @@ jobs:
         run: |
           echo "App: $APP_NAME"
           echo "Versión: $VERSION"
-
       - id: create-timestamp
         run: echo "timestamp=$(date +%s)" >> $GITHUB_OUTPUT
 
@@ -28,15 +27,11 @@ jobs:
       NODE_ENV: test
     steps:
       - uses: actions/checkout@v3
-
       - uses: actions/setup-node@v3
         with:
           node-version: "18"
-
       - run: npm install
-
       - run: npm test
-
       - run: echo "Timestamp del setup: ${{ needs.setup.outputs.timestamp }}"
 
   deploy:
@@ -48,3 +43,4 @@ jobs:
     steps:
       - run: echo "Desplegando $APP_NAME v$VERSION"
       - run: echo "Secret configurada correctamente"
+
