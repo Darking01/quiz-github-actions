@@ -15,5 +15,4 @@ jobs:
         run: date
 
       - name: Sistema operativo
-        run: echo Sistema operativo: $RUNNER_OS
-
+        run: echo "Sistema operativo: $RUNNER_OS"
