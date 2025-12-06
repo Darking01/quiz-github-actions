@@ -1,4 +1,4 @@
-name: "Ejercicio 1"
+name: Ejercicio 1
 
 on:
   push:
@@ -14,5 +14,5 @@ jobs:
       - name: Fecha actual
         run: date
 
-      - name: Sistema operativo del runner
-        run: echo "Runner OS: $RUNNER_OS"
+      - name: Sistema operativo
+        run: echo "Sistema operativo: $RUNNER_OS"
